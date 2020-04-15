@@ -15,7 +15,10 @@ import Sidebar from '@/components/Sidebar.vue';
 import Vue from 'vue';
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
-const apps = require('./appregistry.json');
+// const apps = require('./appregistry.json');
+import { visApps } from '@/environment';
+
+console.log('visApps', visApps);
 
 export default Vue.extend({
   name: 'App',
@@ -26,7 +29,7 @@ export default Vue.extend({
 
   data() {
     return {
-      apps,
+      apps: visApps,
     };
   },
 
